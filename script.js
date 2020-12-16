@@ -148,7 +148,7 @@ function confetti() {
     dyMax = .18,
     dThetaMin = .4,
     dThetaMax = .7 - dThetaMin;
-
+        
   var colorThemes = [
     function () {
       return color(200 * random() | 0, 200 * random() | 0, 200 * random() | 0);
