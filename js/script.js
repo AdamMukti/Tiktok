@@ -33,7 +33,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
               nama = value;
             }
           }
-        }).then(function () {
+        }).then(function (res) {
+		  if(!res.isConfirmed) { return Swal.fire('Kamu Jahat Ngak Mau Ngisi Namamu', '', 'error').then(function () {Swal.fire('Yaudah deh bye!')})}
           const pertanyaan = Swal.fire({
             title: `${nama} sayang ga sama ${sender}?`,
             showDenyButton: true,
